@@ -1,0 +1,28 @@
+<nav class="navbar navbar-expand-md" style="background-color: Teal;">
+    <div class="container-xxl">
+        <div  class="navbar-brand">
+            <span class="fw-bold text-secondary">
+                <img src="../../assets/img/logo.jpg" width="200" height="55">
+            </span>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-lable="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end align-center" id="main-nav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <div class="nav-link btn" [class.bg-primary]="getsignuplit()"  style="color: white;" (click)="signup()">Sign In</div>
+                </li>
+                <li class="nav-item">
+                    <div class="nav-link btn" [class.bg-primary]="getdashboardlit()" [class.disabled]="!issignedin()" style="color: white;" (click)="dashboard()">Dashboard</div>
+                </li>
+                <li class="nav-item">
+                    <div class="nav-link btn" [class.bg-primary]="getqnalit()" [class.disabled]="!issignedin()" style="color: white;" (click)="qna()">Q+A</div>
+                </li>
+                <li class="nav-item">
+                    <div class="nav-link btn" [class.bg-primary]="getprevqlit()" [class.disabled]="!issignedin()" style="color: white;">Post ques</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+   </nav>

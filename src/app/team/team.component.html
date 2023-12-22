@@ -1,0 +1,8 @@
+<div class="card-header" >
+    <p (click)="teamclicked()">{{team.name}}</p>
+    <button *ngIf="true" (click)="navigatequestion(team)">View questions</button>
+    <ul *ngFor="let te of view">
+        <li><app-team [team]="te"></app-team></li>
+    </ul>
+</div>
+

@@ -1,0 +1,24 @@
+
+
+<div>
+    <h4>Post A Question</h4>
+    <form>
+
+    <div class="mb-3 mt-3">
+      <label for="qtitle" class="form-label">Question Title</label>
+      <input type="text" class="form-control" id="qtitle" placeholder="Enter question title" name="qtitle" #postedquestiontitle>
+    </div>
+
+    <label for="qdescr">Question Description</label>
+    <textarea class="form-control" rows="5" id="qdescr" placeholder="Write question description" name="text" #postedquestiondesc></textarea>
+
+    <div class="mb-3 mt-3">
+      <label for="qscope" class="form-label">Question Scope</label>
+      <input type="text" class="form-control" id="qscope" placeholder="Enter team names to whom question is addressed" name="qscope" #team>
+    </div>
+    <br>
+
+    <button  class="btn btn-primary" (click)="post(postedquestiontitle.value,postedquestiondesc.value,team.value)">Post the Question</button>
+  </form>
+
+</div>

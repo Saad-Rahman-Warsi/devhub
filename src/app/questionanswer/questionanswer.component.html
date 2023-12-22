@@ -1,0 +1,18 @@
+<small>Asked by : {{users[question.askedby].username}}</small>
+<h5 style="color: blue">{{question.questiontitle}}</h5>
+<p>{{question.questiondescription}}</p>
+
+<hr>
+
+
+<textarea class="form-control" rows="5" #postans></textarea>
+<br>
+<button type="button" class="btn btn-primary" (click)="post(postans.value)" >Post</button> &nbsp;
+<button type="button" class="btn btn-primary" (click)="cancelanswer()">Cancel</button>
+<ul *ngFor="let te of view">
+    <br>
+    <li>
+        <small>answered by : {{users[te.answeredby].username}}</small>
+        <p>{{te.answer}}</p>
+    </li>
+</ul>

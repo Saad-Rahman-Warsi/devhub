@@ -1,0 +1,27 @@
+<div class="container-fluid">
+	<div class="row">
+
+	  <div class="col-2" style="background-color: #EAEDED;">
+	    <h6>Signed in as <br> {{username.username}} </h6>
+	    <hr>
+	    
+		<ul style="list-style-type:none; margin: 0; padding: 0;">
+			<li (click)="dashboard()"> <a > <i class="fs-4 bi-grid-3x3-gap"></i> &nbsp;&nbsp; Dashboard </a></li>
+			<li (click)="notification()"> <a > <i class="fs-4 bi-bell"></i> &nbsp;&nbsp; Notification </a></li>
+			<li (click)="activity()"> <a > <i class="fs-4 bi-person-walking"></i> &nbsp;&nbsp; Activity </a></li>
+			<li (click)="viewques()"> <a > <i class="fs-4 bi-card-list"></i> &nbsp;&nbsp; View Questions </a></li>
+			<li (click)="postques()"> <a > <i class="fs-4 bi-question-circle"></i> &nbsp;&nbsp; Post A Question </a></li>
+			<li (click)="account()"> <a > <i class="fs-4 bi-person-circle"></i> &nbsp;&nbsp; Account </a></li>
+		  </ul>
+	  </div>
+
+	  <div class="col-10">
+        
+        <app-questionanswers *ngIf="component=='questions'" ></app-questionanswers>
+	<app-questionanswer *ngIf="component=='answers'" ></app-questionanswer> 
+    <app-postquestion *ngIf="component=='postques'"></app-postquestion> 
+	<app-dashsummary *ngIf="component=='dashsummary'"></app-dashsummary>
+    </div>
+
+	</div>
+</div>

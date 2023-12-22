@@ -1,0 +1,22 @@
+
+<h1>Questions Posted</h1>
+<br>
+<div class="btn-group" role="group" aria-label="Basic outlined example">
+    <button type="button" class="btn btn-outline-primary">Newest</button>
+    <button type="button" class="btn btn-outline-primary">Active</button>
+    <button type="button" class="btn btn-outline-primary">Unanswered</button>
+  </div>
+
+<br>
+<hr>
+<div class="questions" *ngFor="let ques of questions">
+   
+
+
+<div class="container-fluid">
+    <span> <small><i>Posted by: {{users[ques.askedby].username}}, &nbsp;&nbsp; Date Posted, 25 Jan 2023, &nbsp;&nbsp; Interest Score: 15 </i></small></span>
+    <a style="color:blue" (click)="navigatequestion(ques)"><h5> {{ques.questiontitle}} </h5></a>
+    {{ques.questiondescription}}
+  </div>
+    <hr >
+</div>
